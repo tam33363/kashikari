@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Kashikari</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Kashikari</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
 
-</body>
+    <div id=header>
+      <% if current_user -%>
+        ようこそ、<%= current_user.nickname %>さん。 | <%= link_to 'logout', logout_path %>
+      <% else -%>
+        <%= link_to 'Twitterでログイン', 'auth/twitter' %>
+        <%= link_to 'Facebookでログイン', 'auth/facebook' %>
+      <% end -%>
+    </div>
+
+    <%= yield %>
+
+  </body>
 </html>
