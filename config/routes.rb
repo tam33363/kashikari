@@ -3,7 +3,10 @@ Kashikari::Application.routes.draw do
 
   # for omniAuth settings
   match '/auth/:provider/callback' => 'sessions#login'
+  match '/auth/failure' => 'sessions#view_request'
   match '/logout' => 'sessions#logout', :as => :logout
+
+  match '/auth/stub' => 'sessions#login_stub'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

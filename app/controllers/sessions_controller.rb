@@ -21,4 +21,8 @@ class SessionsController < ApplicationController
     raise request.env["omniauth.auth"].to_yaml  
   end
 
+  def login_stub
+    session[:user_id] = 1
+    redirect_to root_url, :notice => 'Signed in (Stub mode)'
+  end
 end
