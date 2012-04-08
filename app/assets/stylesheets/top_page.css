@@ -1,0 +1,27 @@
+#top_display {
+	float: left;
+	width: 100%;
+	height: 50px;
+	/*border: solid 1px red;*/
+}
+
+#search {
+	float: left;
+	width: 100%;
+	height: 50px;
+	/*border: solid 1px gray;*/
+}
+
+#item_list {
+	float: left;
+	width: 100%;
+	height: 350px;
+	/*border: solid 1px gray;*/
+}
+
+#member_list {
+	float: left;
+	width: 100%;
+	height: 50px;
+	/*border: solid 1px gray;*/
+}

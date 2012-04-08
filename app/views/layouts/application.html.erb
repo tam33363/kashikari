@@ -9,17 +9,37 @@
 
   <body>
 
-    <div id=header>
-      <% if current_user -%>
-        ようこそ、<%= current_user.nickname %>さん。 | <%= link_to 'logout', logout_path %>
-      <% else -%>
-        <%= link_to 'Twitterでログイン', 'auth/twitter' %>
-        <%= link_to 'Facebookでログイン', 'auth/facebook' %>
-        <%= link_to '仮のログイン', 'auth/stub' %>
-      <% end -%>
+  <div id="wrapper">
+
+    <div id="header">
+      <div id="logo">Kashikari</div>
+
+      <div id="user_navi">
+        <% if current_user -%>
+          ようこそ、<%= current_user.nickname %>さん。 | <%= link_to 'logout', logout_path %>
+        <% else -%>
+          <%= link_to 'Twitterでログイン', 'auth/twitter' %>
+          <%= link_to 'Facebookでログイン', 'auth/facebook' %>
+          <%= link_to '仮のログイン', 'auth/stub' %>
+        <% end -%>
+
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+
+      </div>
+      <div id="user_menu">
+        <%= link_to "貸す" %>
+      </div>
     </div>
 
-    <%= yield %>
+    <div id="content">
+      <%= yield %>
+    </div>
+
+    <div id="footer">
+      Copyright(C) 2011 Toshihide Tamura. All right reserved.
+    </div>
+  </div>
 
   </body>
 </html>

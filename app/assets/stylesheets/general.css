@@ -1,0 +1,73 @@
+/* 基底 */
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* レイアウト */
+div#wrapper {
+  margin-left: 20px;
+  background-color: white;
+  font-size: 12px;
+  color: #697c8e;
+}
+
+div#header, div#content, div#footer {
+  float: left;
+  width: 1000px;
+  /*border: solid 1px green;*/
+}
+
+div#header {
+  height: 60px;
+  padding-top: 10px;
+}
+
+div#footer {
+  height: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+/* 共通設定 */
+div.section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* テーブル */
+table.general {
+  border-collapse: collapse;
+  border: 1px solid #697c8e;
+}
+
+.general th {
+  background-color: #89b5e4;
+  color: white;
+  border: 1px dotted #697c8e;
+}
+
+.general td {
+  padding: 2px 15px 2px 5px;
+  border: 1px dotted #697c8e;
+}
+
+/* ロゴ */
+#logo {
+  float: left;
+  font-size: 24px;
+  font-family: Verdana;
+}
+
+/* サインイン・サインアウト */
+#user_navi {
+  float: left;
+  margin-left: 36px;
+}
+
+/* ユーザメニュー */
+#user_menu {
+  float: right;
+}
